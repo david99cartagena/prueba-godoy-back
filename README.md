@@ -37,13 +37,34 @@ backend/
 
 ## 🎯 Endpoints principales
 
-### `GET /api/search`
+### `GET /api/fact`
 
-Genera un fact aleatorio, un GIF relacionado y almacena la búsqueda en la base de datos.
+Retorna un dato aleatorio desde la API externa **Cat Facts**.
 
-### `GET /api/search/history`
+### `GET /api/gif`
 
-Retorna el historial completo de búsquedas.
+Genera internamente un fact aleatorio, toma las primeras 3 palabras como query, obtiene un GIF relacionado y **guarda la búsqueda en la base de datos**.
+
+> 🔎 Este endpoint realiza tres acciones:
+>
+> 1. Obtiene un fact aleatorio.
+> 2. Usa las primeras tres palabras del fact como búsqueda para un GIF.
+> 3. Guarda el fact, el GIF y la fecha de búsqueda en la base de datos.
+
+### `GET /api/history`
+
+Retorna el historial completo de búsquedas almacenadas.
+
+## 📌 Ejemplo de respuesta (`GET /api/gif`)
+
+```json
+{
+  "factCompleto": "Cats sleep 70% of their lives.",
+  "gifUrl": "https://media.giphy.com/media/abc123/giphy.gif",
+  "tresPalabrasQuery": "Cats sleep 70%",
+  "fechaBusqueda": "2025-07-24T16:45:00Z"
+}
+```
 
 ## 🧠 Datos almacenados
 
@@ -66,6 +87,7 @@ Cada búsqueda contiene:
    ```bash
    dotnet restore
    ```
+
 3. Aplica las migraciones y crea la base de datos:
 
    ```bash
