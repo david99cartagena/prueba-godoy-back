@@ -30,6 +30,7 @@ backend/
 ├── Services/              # Lógica de negocio y servicios externos (APIs, etc.)
 ├── Properties/            # Configuraciones de arranque (launchSettings)
 ├── Program.cs             # Punto de entrada del proyecto
+├── scriptbasededatos.sql  # Script de creacion de base de datos y tabla SearchHistories
 ├── appsettings.json       # Configuración general
 ├── appsettings.Development.json  # Configuración para entorno de desarrollo
 ├── backend.csproj         # Archivo de proyecto
@@ -84,6 +85,7 @@ Cada búsqueda contiene:
    ```
 
 2. Instala los paquetes:
+
    ```bash
    dotnet restore
    ```
