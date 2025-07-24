@@ -29,6 +29,11 @@ builder.Services.AddControllers();
 // Swagger / OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+/* builder.Services.AddSwaggerGen(c =>
+{
+    var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+}); */
 
 // EF Core - Base de datos SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -38,7 +43,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddHttpClient<ICatFactService, CatFactService>();
 builder.Services.AddHttpClient<IGiphyService, GiphyService>();
 
-// Servicios internos (repositorios y lógica de negocio)
+// Servicios internos (repositorios y lï¿½gica de negocio)
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
 
