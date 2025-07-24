@@ -63,3 +63,15 @@ Asegúrate de configurar:
 - Cadena de conexión a SQL Server
 
 ## 📸 Imagenes de la Aplicacion
+
+- **Vista de Swagger**  
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-back/refs/heads/main/backend/Media/Screenshot_1.png)
+
+- **Peticion fact**  
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-back/refs/heads/main/backend/Media/Screenshot_2.png)
+
+- **Peticion gif**  
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-back/refs/heads/main/backend/Media/Screenshot_3.png)
+
+- **Peticion history**  
+  ![CatFact](https://raw.githubusercontent.com/david99cartagena/prueba-godoy-back/refs/heads/main/backend/Media/Screenshot_4.png)
